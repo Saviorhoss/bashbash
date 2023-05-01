@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update -y && apt install -y wget unzip qrencode net-tools
-
+EXPOSE 80
 
 RUN mkdir /etc/mysql /usr/local/mysql
 
