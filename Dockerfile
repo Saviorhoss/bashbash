@@ -1,6 +1,11 @@
 FROM ubuntu
 
-EXPOSE 8080
+
+WORKDIR /app
+USER root
+
+
+EXPOSE 80
 
 RUN apt update -y && apt install -y wget unzip qrencode net-tools
 
