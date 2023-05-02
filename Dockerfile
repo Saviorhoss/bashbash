@@ -2,8 +2,6 @@ FROM nginx:latest
 
 WORKDIR /app
 USER root
-
-
 EXPOSE 80
 
 RUN apt update -y && apt install -y wget unzip qrencode net-tools
