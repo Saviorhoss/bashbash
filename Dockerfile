@@ -9,9 +9,9 @@ EXPOSE 80
 RUN apt update -y && apt install -y wget unzip qrencode net-tools
 
 RUN rm -rf /usr/share/nginx/*
-    wget https://gitlab.com/Misaka-blog/xray-paas/-/raw/main/mikutap.zip -O /usr/share/nginx/mikutap.zip
-    unzip -o "/usr/share/nginx/mikutap.zip" -d /usr/share/nginx/html
-    rm -f /usr/share/nginx/mikutap.zip
+RUN wget https://gitlab.com/Misaka-blog/xray-paas/-/raw/main/mikutap.zip -O /usr/share/nginx/mikutap.zip
+RUN unzip -o "/usr/share/nginx/mikutap.zip" -d /usr/share/nginx/html
+RUN rm -f /usr/share/nginx/mikutap.zip
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
